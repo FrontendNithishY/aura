@@ -1,0 +1,142 @@
+.sidebar {
+  display: none;
+}
+
+.mobileNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0 1rem;
+}
+
+.mobileNavItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: color 0.2s;
+  padding: 0.5rem;
+}
+
+.mobileNavItem:hover, .mobileNavItem:active {
+  color: var(--color-primary);
+}
+
+.mobileNavItemCreate {
+  position: relative;
+  top: -16px;
+}
+
+.createCircle {
+  background-color: var(--color-primary);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: var(--shadow-glow);
+  transition: transform 0.2s;
+}
+
+.createCircle:active {
+  transform: scale(0.95);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.createIcon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .mobileNav {
+    display: none;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 280px;
+    padding: 2rem 1.5rem;
+    border-radius: 0;
+    border-right: 1px solid var(--glass-border);
+    z-index: 50;
+  }
+
+  .logo {
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+  }
+
+  .brandName {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+  }
+
+  .navItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    color: var(--color-text-main);
+    font-size: 1.125rem;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .navItem:hover {
+    background-color: var(--color-surface-hover);
+    color: var(--color-primary);
+  }
+
+  .label {
+    display: block;
+  }
+
+  .createBtnWrapper {
+    margin-top: auto;
+  }
+
+  .createBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    font-size: 1.125rem;
+  }
+}

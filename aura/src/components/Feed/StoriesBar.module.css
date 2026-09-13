@@ -1,0 +1,82 @@
+.container {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.scrollArea {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 0.5rem;
+}
+
+.scrollArea::-webkit-scrollbar {
+  display: none;
+}
+
+.storyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  min-width: 72px;
+}
+
+.avatarRing {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  padding: 3px; /* Space for the gradient border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.storyItem:hover .avatarRing {
+  transform: scale(1.05);
+}
+
+.unviewedRing {
+  background: linear-gradient(45deg, var(--color-accent), var(--color-primary));
+}
+
+.viewedRing {
+  background: var(--color-border);
+}
+
+.createRing {
+  background: transparent;
+  border: 2px dashed var(--color-primary);
+  padding: 2px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text-main);
+  border: 2px solid var(--color-background); /* inner gap effect */
+}
+
+.plusIcon {
+  color: var(--color-primary);
+}
+
+.username {
+  font-size: 0.75rem;
+  color: var(--color-text-main);
+  max-width: 72px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
